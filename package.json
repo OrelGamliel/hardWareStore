@@ -1,0 +1,24 @@
+{
+  "name": "hardwaretools4you",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrelGamliel/hardwareStore.git"
+  },
+  "author": "Orel Gamliel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OrelGamliel/hardwareStore/issues"
+  },
+  "homepage": "https://github.com/OrelGamliel/hardwareStore#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "git": "^0.1.5"
+  }
+}
