@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="jumbotron">
+ 
+   <% if(!noMatch) { %>
+      <h1><i class="fa fa-wrench" aria-hidden="true"></i></span>We Found Somethings</h1>
+         <p>Choose the tool you're looking for!</p>
+      </div>      
+      <%  } %>
+      <% if(noMatch) { %>
+        <h1><i class="fa fa-wrench" aria-hidden="true"></i></span>We Found Nothing!</h1>
+        <p><%= noMatch %></p>
+     </div>    
+     <%  } %>
+        
+    
+      <div class="row"  style="display:flex; flex-wrap:wrap;">
+          <% tools.forEach(function(tool){ %>
+          <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+                 <a href="catalog/more/<%= tool._id %>">
+              <img class="thumbnail-pic"  src="<%= tool.image %>">  
+            </a>
+            </a>   
+            <p> <%= tool.name %> </p>
+            </div>	           
+          </div>
+
+          <% }) %>
+      
+       
+      
+<% include ../partials/footer %>

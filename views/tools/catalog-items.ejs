@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <div class="col-md-9">
+      <header class="jumbotron">
+        <div class="container">
+          <h1><%= category.name %></h1>
+          <h3>Check out our quality goods!</h3>
+          <h5>click on an item for more info</h5>
+
+        </div>
+      </header>
+      <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+         <% tools.forEach(function(tool){ %>
+             <div class="col-md-3 col-sm-6">
+                 <div class="thumbnail">
+                        <a href="/catalog/more/<%=tool._id%>">
+                     <img src="<%= tool.image %>">
+                    </a>
+                     <div class="caption">
+                         <h4><%= tool.name %></h4>
+                     </div>      
+                     <a href="/<%=tool._id%>/add-to-cart" class="btn btn-success btn-sm">Buy Now!</a>                              
+             </div>
+            
+             
+         <% }); %>
+     
+      </div>
+    </div>
+    </div>
+</div>
+    <a href="/catalog">Go Back</a>  
+<% include ../partials/footer %>

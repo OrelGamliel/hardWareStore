@@ -1,0 +1,116 @@
+html,
+body {
+    background-image: url("https://media.istockphoto.com/photos/maple-wood-panel-texture-background-picture-id586070768?k=6&m=586070768&s=612x612&w=0&h=4N6AIRkCdm8DTHF-QkOgibkRV_LsNLg-r8-7ZqYeRqE=");
+    background-repeat:  repeat;
+    background-color: #cccccc;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+.wrapper {
+    min-height:100%;
+    position:relative;
+}
+content {
+    padding:10px;
+    padding-bottom:60px;
+ }
+.thumbnail img {
+    width: 100%;
+}
+.thumbnail {
+    padding: 0;
+}
+.delete-form {
+    display: inline
+}
+
+.jumbotron {
+    padding: 20px;
+     background: rgba(221, 220, 218, 0.3); 
+
+}
+
+.inspiration {
+    text-align: center;
+    font-size: 30px;
+    margin: 50px;
+    color: black;
+}
+.pros {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+.col-xs-6 {
+    margin: 50px 0px 50px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+.number-1 {
+    float: left;
+}
+.number-2 {
+    float: right;
+}
+.number-3 {
+    position: relative;
+    left: 255px;
+}
+
+.icon{
+    font-size: 100px;
+    position: relative;
+    bottom: 50px;
+    left: 230px;
+}
+hr{
+    border-style: none;
+}
+.footer { 
+    width:100%;
+    height:55px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #101010;
+}
+.CustomerSupport{
+    float: left;
+    color: #9d9d9d;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.TradeMark{
+    float: right;
+    color: #9d9d9d;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.fa-wrench {
+    margin-right: 40px;
+}
+.thumbnail{
+ font-size: 20px;
+ text-align: center;
+ border: none;
+ border-radius: 30%;
+ margin: 20px 20px 90px 20px;
+ 
+}
+.thumbnail-pic {
+    border-radius: 5%;
+}
+.img-show {
+ border-radius: 30%;  
+}
+.fa-shopping-cart{
+    margin-right: 5px; 
+}
+.add-to-cart {
+    position: relative;
+    bottom: 33px;
+    margin-right: 20%;
+}

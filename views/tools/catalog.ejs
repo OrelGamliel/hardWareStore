@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div class="jumbotron">
+        <h1><i class="fa fa-wrench" aria-hidden="true"></i></span>The Catalog</h1>
+         <p>Choose the category your looking for!</p>
+      </div>
+      
+    
+      <div class="row"  style="display:flex; flex-wrap:wrap;">
+          <% categories.forEach(function(category){ %>
+          <div class="col-lg-4 col-sm-6">
+            <div class="thumbnail">
+            <a href="/catalog/<%=category._id%>" >         
+              <img class="thumbnail-pic" src="<%= category.image %>">  
+            </a>   
+            <p> <%= category.name %> </p>
+            </div>	           
+          </div>
+          <% }) %>
+
+<% include ../partials/footer %>

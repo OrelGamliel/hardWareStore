@@ -1,0 +1,50 @@
+<% include ../partials/header %>
+
+    <div class="row">
+        <div class="col-md-6 text-left">
+            <p class="lead" >HardWareTools-R-US</p>
+            <% tool.comments.forEach(function(comment){ %>
+                
+                    <div class="row">
+                        <strong><%= comment.author.username %></strong>
+                        <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
+                        <p>
+                        <%= comment.text %> 
+                        </p>
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                        <a class="btn btn-xs btn-warning" 
+                        href="<%=tool._id%>/comments/<%=comment._id%>/edit">
+                            Edit
+                        </a>
+                        <form class="delete-form" action="<%=tool._id%>/comments/<%=comment._id%>?_method=DELETE" method ="POST">
+                        <button class="btn btn-xs btn-danger">Delete</button> 
+                        </form>
+                        <% } %>
+                    </div>
+          
+            <% }) %>
+        </div>
+        <div class="col-md-6">
+            <div >
+                <img class="img-responsive img-show" src="<%=tool.image%>">
+                <div class="caption">
+                    <h4 class="pull-right lead">$<%=tool.price%></h4>
+                    <h4 class="lead text-center"><%=tool.name%></h4>
+                    <p class="lead"><%=tool.description%></p>
+
+                </div>
+            </div>
+            <div >
+                <div class="text-right comment-add">
+                    <a class="btn btn-primary" href="<%=tool._id%>/comments/new">Add new comment</a>
+                </div>
+                <div class="add-to-cart">
+                        <a class="btn btn-success" href="/<%=tool._id%>/add-to-cart">Add To Cart</a>
+                    </div>
+    
+            </div>
+        </div>
+    </div>
+    
+    
+<% include ../partials/footer %>
