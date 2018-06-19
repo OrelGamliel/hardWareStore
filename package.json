@@ -1,24 +1,28 @@
 {
-  "name": "hardwaretools4you",
+  "name": "packagejason",
   "version": "1.0.0",
-  "description": "",
+  "description": "YelpCamp",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OrelGamliel/hardwareStore.git"
-  },
   "author": "Orel Gamliel",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OrelGamliel/hardwareStore/issues"
-  },
-  "homepage": "https://github.com/OrelGamliel/hardwareStore#readme",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.3",
-    "git": "^0.1.5"
+    "async": "^2.6.1",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.3",
+    "node-geocoder": "^3.22.0",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.5.0",
+    "stripe": "^6.1.1"
   }
 }
