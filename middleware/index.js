@@ -1,4 +1,4 @@
-var Tool = require("../models/tool");
+
 var Comment = require("../models/comment");
 var middlewareObj = {};
 

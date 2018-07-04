@@ -7,6 +7,7 @@ var Cart = require("../models/cart")
 var Order = require("../models/order")
 
 //index route
+//search logic
 router.get("/home", function(req, res){
     var noMatch = null;
     if(req.query.search) {
@@ -27,7 +28,7 @@ router.get("/home", function(req, res){
 });
 
 
-
+//catalog route
 router.get("/catalog", function(req, res){
         Category.find({}, function(err, categories){
         if(err){
@@ -38,7 +39,7 @@ router.get("/catalog", function(req, res){
     });
 });
 
-
+//category route
 router.get("/catalog/:id", function (req, res) {
         Category.findById(req.params.id, function (err, foundCategory) {
                 if (err || !foundCategory) {
@@ -47,13 +48,11 @@ router.get("/catalog/:id", function (req, res) {
                 }
             
                 Tool.find({
-                    // As described in the question we filter by a `name` field
-                    // although in future you might consider creating an ObjectId reference
+
                     category: foundCategory.name
                 }, function (err, foundTools) {
             
-                    // As we applied filtering we might return an empty array of tools
-                    // instead of throwing an error
+
                     if (err || !foundTools) {
                         req.flash("error", "No tools were found.");
                         return res.redirect("back");
@@ -80,7 +79,7 @@ router.get("/catalog/more/:id", function(req, res){
     });
 });
         
-
+    //add to cart logic
 router.get('/:id/add-to-cart',middleware.isLoggedIn, function(req, res, next) { 
     var cart = new Cart(req.session.cart ? req.session.cart : {});
 
@@ -94,7 +93,7 @@ router.get('/:id/add-to-cart',middleware.isLoggedIn, function(req, res, next) {
         res.redirect('back');
     });
 });
-
+ //shopping cart route
 router.get('/shopping-cart',middleware.isLoggedIn, function(req, res){
     if (!req.session.cart) {
         return res.render('tools/shopping-cart', {tools: null})
@@ -102,6 +101,7 @@ router.get('/shopping-cart',middleware.isLoggedIn, function(req, res){
     var cart = new Cart(req.session.cart);
     res.render('tools/shopping-cart', {tools: cart.generateArray(), totalPrice: cart.totalPrice})
 });
+//reduce shopping cart item quantity logic
 router.get('/reduce/:id', function(req, res, next) {
     var cart = new Cart(req.session.cart ? req.session.cart : {});
 
@@ -109,7 +109,7 @@ router.get('/reduce/:id', function(req, res, next) {
     req.session.cart = cart;
     res.redirect('/shopping-cart');
 });
-
+//remove shopping cart item logic
 router.get('/remove/:id', function(req, res, next) {
  
     var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -118,6 +118,7 @@ router.get('/remove/:id', function(req, res, next) {
     req.session.cart = cart;
     res.redirect('/shopping-cart');
 });
+//checkout form
 router.get('/checkout',middleware.isLoggedIn, function(req, res){
     if (!req.session.cart) {
         return res.render('tools/shopping-cart', {tools: null})
@@ -125,7 +126,7 @@ router.get('/checkout',middleware.isLoggedIn, function(req, res){
     var cart = new Cart(req.session.cart);
     res.render('tools/checkout', {totalPrice: cart.totalPrice})
 });
-
+//checkout logic
 router.post('/checkout', middleware.isLoggedIn, function(req, res) {
     if (!req.session.cart) {
         return res.redirect('/shopping-cart');

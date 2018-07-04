@@ -4,7 +4,7 @@ var passport = require("passport");
 var User = require("../models/user");
 
 
-//root route
+//landing page
 router.get("/", function (req, res) {
     res.render("landing");
 });
@@ -37,7 +37,7 @@ router.post("/login", passport.authenticate("local",
         successRedirect: "/catalog",
         failureRedirect: "/login",
         failureFlash: true,
-        successFlash: 'Welcome to YelpCamp!'
+        successFlash: 'Welcome to the store!'
     }), function (req, res) {
     });
 //logout

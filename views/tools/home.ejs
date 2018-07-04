@@ -1,85 +1,103 @@
 <% include ../partials/header %>
 
-      <header class="jumbotron">
-        <div class="container">
-          <h1>Welcome To HardwareTools-R-Us!</h1>
-          <p>Do It Yourself! Be The Mastercraftsman Of Your Castle!</p>
-          <form action="/home" method="GET" class="form-inline">
-            <div class="form-group">
-              <input type="text" name="search" placeholder="Campground search..." class="form-control">
-              <input type="submit" value="Search" class="btn btn-default">
-            </div>
-          </form>
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome To HardwareTools-R-Us!</h1>
+      <p>Do It Yourself! Be The Mastercraftsman Of Your Castle!</p>
+      <form action="/home" method="GET" class="form-inline">
+        <div class="form-group">
+          <input type="text" name="search" placeholder="Campground search..." class="form-control">
+          <input type="submit" value="Search" class="btn btn-default">
         </div>
-      </header>
+      </form>
+    </div>
+  </header>
 
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <a href="/catalog">
-      <img src="http://www.afsperu.com/images/galeria/productos/17.jpg"  alt="TOPTUL TOOLS">
-      </a>
-      <div class="carousel-caption">
-            <h3>TOPTUL UP TO 50% OFF</h3>
-            <p>Check out our INSANE sales on Toptul!</p>
-          </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="/catalog">
+          <img src="http://www.afsperu.com/images/galeria/productos/17.jpg" alt="TOPTUL TOOLS">
+        </a>
+        <div class="carousel-caption">
+          <h3>TOPTUL UP TO 50% OFF</h3>
+          <p>Check out our INSANE sales on Toptul!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="/catalog">
+          <img src="http://ivanfasteners.ca/image/cache/catalog/Header/nuts-and-bolts-1140x500.jpg" alt="BOLTS AND NUTS">
+        </a>
+        <div class="carousel-caption">
+          <h3>FREE NUTS ON EACH BUY!</h3>
+          <p>All the nuts and bolts you will ever need!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <a href="/catalog">
+          <img src="https://www.maasradiator.com/wp-content/uploads/2016/12/slider-const.png" alt="BULLDOZER">
+        </a>
+
+        <div class="carousel-caption">
+          <h3>BULLDOZERS! ! !</h3>
+          <p>Of course we sell bulldozer what are you crazy??</p>
+        </div>
+      </div>
     </div>
 
-    <div class="item">
-        <a href="/catalog">
-      <img src="http://ivanfasteners.ca/image/cache/catalog/Header/nuts-and-bolts-1140x500.jpg" alt="BOLTS AND NUTS">
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
     </a>
-      <div class="carousel-caption">
-            <h3>FREE NUTS ON EACH BUY!</h3>
-            <p>All the nuts and bolts you will ever need!</p>
-          </div>
-    </div>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <hr>
+  <div class="container text-center">
+    <div class="row">
 
-    <div class="item">
-        <a href="/catalog">
-      <img src="https://www.maasradiator.com/wp-content/uploads/2016/12/slider-const.png" alt="BULLDOZER">
-       </a>
-          
-      <div class="carousel-caption">
-            <h3>BULLDOZERS! ! !</h3>
-            <p>Of course we sell bulldozer what are you crazy??</p>
-          </div>
+      <p class="inspiration">Its time you stop wasting your time and fix that thing your wife's been nagging you about! each second that passes
+        youre less of a man in her eyes!!</p>
+      <p class="pros">
+        <strong>Three major pros that make us the best online Hardware Store around!!</strong>
+      </p>
+      <hr>
+      <div>
+        <a class="btn btn-primary btn-lg" href="catalog">Browse Our Catalog!</a>
+      </div>
+    </div>
+    <div class="pros">
+      <div class="row">
+      <div class="col-md-6 pro">
+        <i class="icon fas fa-car"></i>
+        <br>
+        <strong>number 1:</strong> Our deliveries are the fastest in the world, carried out by a cheeta driving a ferrari!</div>
+      <div class="col-md-6 pro">
+        <i class="icon fas fa-wrench"></i>
+        <br>
+        <strong>number 2:</strong> Our products are top notch! such quality brands as: Wolf-Garten, Schliesing, Rothenberger and
+        other german words!</div>
+      <div class="col-md-12 pro">
+        <i class="icon fab fa-fort-awesome"></i>
+        <br>
+        <strong>number 3:</strong> We have a never ending supply of products!! you can literly build a castle! </div>
     </div>
   </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-    <hr>
-    <div class="container">
-        <p class="inspiration">Its time you stop wasting your time and fix that thing your wife's been nagging you about! each second that passes youre less of a man in her eyes!!</p>
-        <p class="pros"><strong>Three major pros that make us the best online Hardware Store around!!</strong> </p>
-        <hr>
-        <div class="text-center" >
-                <a class="btn btn-primary btn-lg" href="catalog">Browse Our Catalog!</a>
-            </div>
-        <div class="col-xs-6 number-1"><i class="icon fas fa-car"></i><strong>number 1:</strong> Our deliveries are the fastest in the world, carried out by a cheeta driving a ferrari!</div>
-        <div class="col-xs-6 number-2"><i class="icon fas fa-wrench"></i><strong>number 2:</strong> Our products are top notch! such quality brands as: Wolf-Garten, Schliesing, Rothenberger and other german words!</div>
-        <br>
-        <div class="col-xs-6 number-3"><i class="icon fab fa-fort-awesome"></i><strong>number 3:</strong> We have a never ending supply of products!! you can literly build a castle! </div>
-    </div>
-    <hr>
-  
+  <hr>
 
 
-<% include ../partials/footer %>
+
+  <% include ../partials/footer %>
