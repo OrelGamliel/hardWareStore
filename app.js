@@ -18,7 +18,9 @@ var commentRoutes      = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
     
 seedDB();    
-mongoose.connect("mongodb://localhost/hardwaretools_R_Us");
+// mongoose.connect("mongodb://localhost/hardwaretools_R_Us");
+mongoose.connect("mongodb://tarkus:coolbeans1@ds131711.mlab.com:31711/hardwaretoolsrus");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
