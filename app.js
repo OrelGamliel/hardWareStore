@@ -52,6 +52,6 @@ app.use("/",indexRoutes);
 app.use("/",toolRoutes);
 app.use("/catalog/:id/:tool_id/comments",commentRoutes);
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 5000, function(){
     console.log("ITS ON");
 });
