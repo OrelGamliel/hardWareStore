@@ -54,33 +54,6 @@ content {
 hr{
     border-style: none;
 }
-.footer { 
-    width:100%;
-    height:55px;
-    position:absolute;
-    bottom:0;
-    left:0;
-    background: #101010;
-}
-.footer-pro{
-    width:100%;
-    height:55px;
-    margin-top: 20px;
-}
-.CustomerSupport{
-    float: left;
-    color: #9d9d9d;
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 1.8vh;
-}
-.TradeMark{
-    float: right;
-    color: #9d9d9d;
-    margin-right: 20px;
-    margin-top: 20px;
-    font-size: 1.8vh;
-}
 
 .thumbnail{
  font-size: 20px;
@@ -107,3 +80,36 @@ hr{
     bottom: 33px;
     margin-right: 20%;
 }
+
+.padding {
+    padding-bottom: 2rem;
+  }
+  footer {
+    background-color:#101010;
+    color: #d5d5d5;
+    padding-top: 2rem;
+  }
+  
+  hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+  }
+   
+  footer a {
+    color: #d5d5d5;
+  }
+  
+  hr.light-100 {
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+  }
+  footer img {
+      width: 5%;
+  }
+  .carousel-caption {
+      font-size: 2vh;
+  }
